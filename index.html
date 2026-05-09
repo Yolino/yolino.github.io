@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- ============================================== -->
+    <!-- Métadonnées principales du site                -->
+    <!-- ============================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Tiago Carmo Silveirinha - Étudiant en Bachelier Technologie de l'Informatique à l'EPHEC">
+    <meta name="author" content="Tiago Carmo Silveirinha">
+    <title>Tiago Carmo Silveirinha — Portfolio</title>
+
+    <!-- Import de la police JetBrains Mono via Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Feuille de style externe -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================== -->
+    <!-- HEADER : Barre de navigation sticky            -->
+    <!-- ============================================== -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#hero" class="navbar__logo">
+                <span class="navbar__logo-bracket">&lt;</span>TCS<span class="navbar__logo-bracket">/&gt;</span>
+            </a>
+
+            <!-- Bouton menu burger pour mobile -->
+            <button class="navbar__burger" id="burger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Liens de navigation -->
+            <nav class="navbar__nav" id="nav-links">
+                <ul>
+                    <li><a href="#apropos" class="nav-link">À propos</a></li>
+                    <li><a href="#cv" class="nav-link">CV</a></li>
+                    <li><a href="#activites" class="nav-link">Activités</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============================================== -->
+        <!-- SECTION HERO : Bannière d'accueil              -->
+        <!-- ============================================== -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <p class="hero__greeting">// Bienvenue sur mon portfolio</p>
+                <h1 class="hero__title">
+                    Tiago Carmo<br>
+                    <span class="accent">Silveirinha</span>
+                </h1>
+                <p class="hero__subtitle">
+                    Étudiant en Bachelier Technologie de l'Informatique
+                    <br>EPHEC — Louvain-La-Neuve
+                </p>
+                <div class="hero__actions">
+                    <a href="#activites" class="btn btn--primary">Voir mes activités</a>
+                    <a href="#contact" class="btn btn--ghost">Me contacter</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SECTION À PROPOS                                -->
+        <!-- ============================================== -->
+        <section id="apropos" class="section">
+            <div class="container">
+                <h2 class="section__title"><span class="accent">#</span> À propos</h2>
+
+                <div class="about">
+                    <!-- Photo de profil (placeholder) -->
+                    <div class="about__photo">
+                        <img src="assets/images/profile.png"
+                             alt="Photo de Tiago Carmo Silveirinha"
+                             onerror="this.src='https://placehold.co/400x400/313244/cba6f7?text=Photo+Profil&font=jetbrainsmono'">
+                    </div>
+
+                    <!-- Présentation textuelle -->
+                    <div class="about__intro">
+                        <h3>Tiago Carmo Silveirinha</h3>
+                        <p class="about__role">Bachelier en Technologie de l'Informatique</p>
+                        <p class="about__school">EPHEC — Louvain-La-Neuve</p>
+                        <p class="about__bio">
+                            Passionné par l'informatique et le développement, je construis ce portfolio
+                            dans le cadre de mon parcours académique afin de présenter mes activités,
+                            mes compétences et ma progression tout au long de mes études.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Trois blocs distincts requis par l'école -->
+                <div class="cards-grid">
+
+                    <!-- Bloc Projet professionnel -->
+                    <article class="card">
+                        <div class="card__icon">🎯</div>
+                        <h3 class="card__title">Projet professionnel</h3>
+                        <p class="card__text">
+                            <em>Data Analyst</em><br><br>
+                            Pendant longtemps, j'ai cherché ce que j'aimais vraiment dans l'informatique. Aujourd'hui, je pense que j'ai envie de découvrir en profondeur le domaine de la Data Analysis. Mon objectif actuel est simple : tester ce métier (via des projets persos, des challenges) pour confirmer que c'est bien la voie dans laquelle je veux me spécialiser.
+                        </p>
+                    </article>
+
+                    <!-- Bloc Points forts -->
+                    <article class="card">
+                        <div class="card__icon">💪</div>
+                        <h3 class="card__title">Mes points forts</h3>
+                        <ul class="card__list">
+                            <li>Capacité d'apprentissage rapide</li>
+                            <li>Esprit logique et analytique</li>
+                            <li>Autonomie dans le travail</li>
+                            <li>Esprit d'équipe</li>
+                        </ul>
+                    </article>
+
+                    <!-- Bloc Points faibles -->
+                    <article class="card">
+                        <div class="card__icon">🎯</div>
+                        <h3 class="card__title">Mes points faibles</h3>
+                        <ul class="card__list">
+                            <li>Prise de parole en public</li>
+                            <li>Gestion du stress</li>
+                            <li>Difficulté à dire "non" (Surcharge de travail)</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SECTION CV                                      -->
+        <!-- ============================================== -->
+        <section id="cv" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title"><span class="accent">#</span> Curriculum Vitae</h2>
+
+                <div class="cv">
+
+                    <!-- Bloc téléchargement du CV -->
+                    <div class="cv__download">
+                        <div class="cv__download-icon">📄</div>
+                        <h3>Mon CV au format PDF</h3>
+                        <p>Téléchargez la version complète et à jour de mon CV.</p>
+                        <a href="assets/cv/CV_Tiago_Carmo_Silveirinha.pdf"
+                           download
+                           class="btn btn--primary">
+                            ⬇ Télécharger le CV (PDF)
+                        </a>
+                    </div>
+
+                    <!-- Résumé visuel des compétences -->
+                    <div class="cv__skills">
+                        <h3>Résumé de mes compétences</h3>
+
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>HTML / CSS / JavaScript</span>
+                                <span class="skill__percent">80%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" style="width: 80%"></div></div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>Python</span>
+                                <span class="skill__percent">80%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" style="width: 80%"></div></div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>PHP</span>
+                                <span class="skill__percent">65%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" style="width: 65%"></div></div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>SQL / Bases de données</span>
+                                <span class="skill__percent">70%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" style="width: 70%"></div></div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>Linux</span>
+                                <span class="skill__percent">60%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" style="width: 60%"></div></div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span>GitHub</span>
+                                <span class="skill__percent">75%</span>
+                            </div>
+                            <div class="skill__bar"><div class="skill__fill" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SECTION ACTIVITÉS                               -->
+        <!-- ============================================== -->
+        <section id="activites" class="section">
+            <div class="container">
+                <h2 class="section__title"><span class="accent">#</span> Mes activités</h2>
+                <p class="section__intro">
+                    Cliquez sur chaque ligne pour dérouler le contexte
+                    et les preuves associées.
+                </p>
+
+                <!-- Tableau dynamique des activités -->
+                <div class="activities-table" id="activities-table">
+
+                    <!-- En-têtes du tableau -->
+                    <div class="activities-table__head">
+                        <div class="col col--theme">Thème</div>
+                        <div class="col col--activities">Activités</div>
+                        <div class="col col--hours">Heures<br>réalisées</div>
+                        <div class="col col--hours">Heures<br>validées</div>
+                        <div class="col col--toggle" aria-hidden="true"></div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 1 : Hackathon                        -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="22" data-validees="10">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-1-content">
+                            <span class="col col--theme">🏆 Hackathon</span>
+                            <span class="col col--activities">Hackathon 2025</span>
+                            <span class="col col--hours" data-label="Réalisées">22h</span>
+                            <span class="col col--hours" data-label="Validées">10h</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-1-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Décrivez le contexte du Hackathon 2025 : organisateur, lieu, durée, équipe, sujet du challenge et objectifs visés.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-hackathon-2025.jpg" alt="Preuve Hackathon 2025" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=Hackathon+2025&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 2 : Cybersecurity Challenge 2024     -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="8" data-validees="8">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-2-content">
+                            <span class="col col--theme">🔒 Cybersecurity Challenge</span>
+                            <span class="col col--activities">Cybersecurity Challenge 2024</span>
+                            <span class="col col--hours" data-label="Réalisées">8h</span>
+                            <span class="col col--hours" data-label="Validées">8h</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-2-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Participation au <strong>Cybersecurity Challenge 2024</strong> (8h) : équipe, épreuves, classement et technologies utilisées.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-csc-2024.jpg" alt="Cybersecurity Challenge 2024" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=CSC+2024&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 3 : Cybersecurity Challenge 2025     -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="7.5" data-validees="7.5">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-3-content">
+                            <span class="col col--theme">🔒 Cybersecurity Challenge</span>
+                            <span class="col col--activities">Cybersecurity Challenge 2025</span>
+                            <span class="col col--hours" data-label="Réalisées">7h30</span>
+                            <span class="col col--hours" data-label="Validées">7h30</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-3-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Participation au <strong>Cybersecurity Challenge 2025</strong> (7h30) : équipe, épreuves, classement et progrès par rapport à 2024.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-csc-2025.jpg" alt="Cybersecurity Challenge 2025" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=CSC+2025&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 4 : CTF temps de midi 2024           -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="1" data-validees="1">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-4-content">
+                            <span class="col col--theme">🚩 Capture The Flag</span>
+                            <span class="col col--activities">CTF temps de midi 2024</span>
+                            <span class="col col--hours" data-label="Réalisées">1h</span>
+                            <span class="col col--hours" data-label="Validées">1h</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-4-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Session <strong>CTF temps de midi 2024</strong> (1h) organisée à l'EPHEC : format, type de challenges (web, crypto, forensic...) et équipe.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves </h4>   
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-ctf-midi-2024.jpg" alt="CTF temps de midi 2024" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=CTF+Midi+2024&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 5 : CTF temps de midi 2025           -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="1" data-validees="1">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-5-content">
+                            <span class="col col--theme">🚩 Capture The Flag</span>
+                            <span class="col col--activities">CTF temps de midi 2025</span>
+                            <span class="col col--hours" data-label="Réalisées">1h</span>
+                            <span class="col col--hours" data-label="Validées">1h</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-5-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Session <strong>CTF temps de midi 2025</strong> (1h) organisée à l'EPHEC : format, type de challenges et progression par rapport à l'édition précédente.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-ctf-midi-2025.jpg" alt="CTF temps de midi 2025" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=CTF+Midi+2025&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 6 : Conférence Kap Tech              -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="2.5" data-validees="2.5">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-6-content">
+                            <span class="col col--theme">🎤 Conférence</span>
+                            <span class="col col--activities">Kap Tech : « Impact des IA conversationnelles »</span>
+                            <span class="col col--hours" data-label="Réalisées">2h30</span>
+                            <span class="col col--hours" data-label="Validées">2h30</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-6-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Conférence <strong>Kap Tech : « Impact des IA conversationnelles »</strong> (2h30) : intervenants, thèmes abordés, public visé.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-conf-kaptech.jpg" alt="Conférence Kap Tech" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=Kap+Tech&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 7 : Conférence Cloud M365 & Azure    -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="2" data-validees="2">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-7-content">
+                            <span class="col col--theme">🎤 Conférence</span>
+                            <span class="col col--activities">Cloud avec M365 et Azure Infrastructure</span>
+                            <span class="col col--hours" data-label="Réalisées">2h</span>
+                            <span class="col col--hours" data-label="Validées">2h</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-7-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Conférence <strong>« Cloud avec M365 et Azure Infrastructure »</strong> (2h) : organisateur, intervenants, contenu et apports techniques.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-conf-cloud.jpg" alt="Conférence Cloud" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=Cloud+Azure&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 8 : OpenClassrooms — Machine Learning -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="10" data-validees="10">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-8-content">
+                            <span class="col col--theme">📚 Formation</span>
+                            <span class="col col--activities">OpenClassrooms — Initiation au Machine Learning</span>
+                            <span class="col col--hours" data-label="Réalisées">10h</span>
+                            <span class="col col--hours" data-label="Validées">10h</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-8-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Formation <strong>OpenClassrooms : Initiation au Machine Learning</strong> (10h) : modules suivis, exercices, projets pratiques.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-oc-ml.jpg" alt="OpenClassrooms ML" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=OC+ML&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 9 : OpenClassrooms — PHP POO         -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="10" data-validees="10">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-9-content">
+                            <span class="col col--theme">📚 Formation</span>
+                            <span class="col col--activities">OpenClassrooms — Programmation PHP orienté objet</span>
+                            <span class="col col--hours" data-label="Réalisées">10h</span>
+                            <span class="col col--hours" data-label="Validées">10h</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-9-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Formation <strong>OpenClassrooms : Programmation en PHP orienté objet</strong> (10h) : concepts POO, classes, héritage, interfaces, projets pratiques.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-oc-php.jpg" alt="OpenClassrooms PHP" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=OC+PHP&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 10 : Grafikart — Laravel             -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="10" data-validees="0">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-10-content">
+                            <span class="col col--theme">📚 Formation</span>
+                            <span class="col col--activities">Grafikart — Découverte de Laravel</span>
+                            <span class="col col--hours" data-label="Réalisées">10h</span>
+                            <span class="col col--hours" data-label="Validées">0h</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-10-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Formation <strong>Grafikart : Découverte de Laravel</strong>  : prise en main du framework, routing, Eloquent, Blade, projet d'application.</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-grafikart.jpg" alt="Grafikart Laravel" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=Grafikart&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- ACTIVITÉ 11 : Job étudiant — Colruyt          -->
+                    <!-- ============================================ -->
+                    <div class="activity-row" data-realisees="10" data-validees="10">
+                        <button class="activity-row__header" aria-expanded="false" aria-controls="activity-11-content">
+                            <span class="col col--theme">💼 Job étudiant</span>
+                            <span class="col col--activities">Colruyt</span>
+                            <span class="col col--hours" data-label="Réalisées">10h</span>
+                            <span class="col col--hours" data-label="Validées">10h</span>
+                            <span class="col col--toggle">▼</span>
+                        </button>
+                        <div class="activity-row__content" id="activity-11-content">
+                            <div class="content-block">
+                                <h4>📌 Contexte de l'activité</h4>
+                                <p>Job étudiant chez <strong>Colruyt</strong> : poste occupé, missions, durée, compétences transversales développées (organisation, relation client, gestion du stress, travail en équipe).</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>📎 Preuves</h4>
+                                <div class="proofs">
+                                    <img src="assets/images/preuve-colruyt.jpg" alt="Job étudiant Colruyt" onerror="this.src='https://placehold.co/300x200/313244/cba6f7?text=Colruyt&font=jetbrainsmono'">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================ -->
+                    <!-- LIGNE TOTAL (calculée dynamiquement en JS)    -->
+                    <!-- ============================================ -->
+                    <div class="activities-table__total" id="total-row">
+                        <div class="col col--theme"><strong>TOTAL</strong></div>
+                        <div class="col col--activities">Cumul de toutes les activités</div>
+                        <div class="col col--hours" data-label="Réalisées">
+                            <strong id="total-realisees">0h</strong>
+                        </div>
+                        <div class="col col--hours" data-label="Validées">
+                            <strong id="total-validees">0h</strong>
+                        </div>
+                        <div class="col col--toggle" aria-hidden="true"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SECTION CONTACT                                 -->
+        <!-- ============================================== -->
+        <section id="contact" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title"><span class="accent">#</span> Me contacter</h2>
+
+                <div class="contact">
+
+                    <!-- Liens sociaux -->
+                    <div class="contact__links">
+                        <h3>Retrouvez-moi en ligne</h3>
+                        <div class="social-links-row">
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/Yolino" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <span class="social-link__icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                </svg>
+                            </span>
+                            <span class="social-link__text">
+                                <strong>GitHub</strong>
+                                <small>github.com/Yolino</small>
+                            </span>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/tiagocarmosilveirinha/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <span class="social-link__icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                                </svg>
+                            </span>
+                            <span class="social-link__text">
+                                <strong>LinkedIn</strong>
+                                <small>tiagocarmosilveirinha</small>
+                            </span>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:t.carmosilveirinha@gmail.com" class="social-link">
+                            <span class="social-link__icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+                                </svg>
+                            </span>
+                            <span class="social-link__text">
+                                <strong>Email</strong>
+                                <small>t.carmosilveirinha@gmail.com</small>
+                            </span>
+                        </a>
+
+                        </div><!-- /.social-links-row -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================== -->
+    <!-- FOOTER                                          -->
+    <!-- ============================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year"></span> Tiago Carmo Silveirinha — Portfolio EPHEC</p>
+            <p class="footer__note">Construit avec HTML, CSS &amp; JavaScript natif · Hébergé sur GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- Script JS externe (chargé en différé) -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
