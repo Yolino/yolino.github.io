@@ -629,14 +629,70 @@ img {
 .proofs img {
     width: 200px;
     height: 130px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: var(--bg-main);
     border-radius: var(--radius-sm);
     border: 1px solid var(--border);
     transition: transform var(--transition), border-color var(--transition);
+    cursor: zoom-in;
 }
 .proofs img:hover {
     transform: scale(1.05);
     border-color: var(--accent);
+}
+
+/* ----------------------------------------------------------
+   LIGHTBOX
+   ---------------------------------------------------------- */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+}
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.lightbox__img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: var(--radius-md);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+    transform: scale(0.9);
+    transition: transform var(--transition);
+    object-fit: contain;
+}
+.lightbox.active .lightbox__img {
+    transform: scale(1);
+}
+.lightbox__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background var(--transition), color var(--transition);
+}
+.lightbox__close:hover {
+    background: var(--accent);
+    color: var(--bg-main);
 }
 
 /* Ligne TOTAL */

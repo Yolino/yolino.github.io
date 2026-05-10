@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initFooterYear();
     initNavbarScroll();
+    initLightbox();
 });
 
 
@@ -202,7 +203,45 @@ function initFooterYear() {
 
 
 /* ----------------------------------------------------------
-   6. EFFET DE SCROLL SUR LA NAVBAR
+   6. LIGHTBOX — Agrandissement des images au clic
+   ---------------------------------------------------------- */
+function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    if (!lightbox || !lightboxImg || !closeBtn) return;
+
+    function openLightbox(img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.proofs img').forEach(img => {
+        img.addEventListener('click', () => openLightbox(img));
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    });
+}
+
+
+/* ----------------------------------------------------------
+   7. EFFET DE SCROLL SUR LA NAVBAR
    ---------------------------------------------------------- */
 /**
  * Ajoute une classe CSS lorsque l'utilisateur a scrollé,
